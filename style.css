@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.html, body{
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: white;
+}
+
+.header {
+  background-color: #183c10e9;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #2F4F4F;
+  padding: 10px;
+}
+
+.logo-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.tagline {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.about {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-top: 5px;
+}
+
+.about-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center; /* Center align title */
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items */
+  gap: 10px;
+}
+
+.about-item {
+  flex: 1 1 calc(33.33% - 5px); /* Mengatur lebar untuk 3 item per baris */
+  margin: 5px; /* Jarak 5px antara item */
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #abcdcd;
+}
+
+.about-item h3 {
+  margin-top: 0;
+}
+
+.gallery {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.gallery-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: nowrap; /* Pastikan semua item tetap di baris yang sama */
+  overflow-x: auto; /* Mengaktifkan scroll horizontal */
+  padding: 10px;
+  gap: 10px;
+  scroll-behavior: smooth; /* Opsional: untuk scroll yang halus */
+}
+
+.gallery-container img {
+  flex: 0 0 300px; /* Set fixed width for the images */
+  height: 200px; /* Fixed height */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+.overlay {
+  display: none; /* Tersembunyi secara default */
+  position: fixed; /* Mengisi layar penuh */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Latar belakang gelap dengan transparansi */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Di atas elemen lain */
+}
+
+.overlay img {
+  max-width: 90%; /* Maksimal lebar gambar 90% dari lebar layar */
+  max-height: 90%; /* Maksimal tinggi gambar 90% dari tinggi layar */
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.donation {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.donation-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.donation-area {
+  background-color: #8B0000;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.donation-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items */
+  text-align: center;
+}
+
+.donation-item {
+  flex: 1 1 calc(25% - 20px); /* 4 items per row on larger screens */
+  margin: 10px;
+  background-color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+}
+
+.donation-item img {
+  width: 100px; /* Ubah ukuran menjadi lebih besar */
+  height: 100px;
+  margin-bottom: 20px;
+  border-radius: 0; /* Hapus bulat dengan border-radius 0 */
+}
+
+.donation-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donation-info-content {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.background-image {
+  background-image: url('BackGround.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh; /* Menggunakan 50% dari tinggi viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px; /* Jarak dengan bagian "Tentang Kami" */
+}
+
+.footer {
+  background-color: #183c10; /* Warna latar belakang footer */
+  color: #fff; /* Warna teks */
+  text-align: right; /* Memposisikan teks ke kanan */
+  padding: 5px; /* Ruang atas dan bawah, ruang samping */
+  position: relative; /* Memastikan footer tetap di posisi yang ditentukan */
+  bottom: 0; /* Mengatur posisi footer di bagian bawah */
+  right: 0; /* Mengatur posisi footer di bagian kanan */
+  width: auto; /* Lebar otomatis agar sesuai dengan teks */
+  font-size: 5px; /* Ukuran font */
+}
+
+.footer p {
+  margin: 0; /* Menghilangkan margin pada paragraf */
+}
+
+@media (max-width: 1024px) {
+  .background-image {
+    height: 40vh;
+  }
+  
+  .about-item {
+    flex: 1 1 calc(50% - 5px); /* 2 item per baris pada tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .background-image {
+    height: 30vh;
+  }
+  
+  .about-item {
+    flex: 1 1 100%; /* 1 item per baris pada smartphone */
+  }
+}
+
+@media (max-width: 480px) {
+  .background-image {
+    height: 25vh;
+  }
+}
